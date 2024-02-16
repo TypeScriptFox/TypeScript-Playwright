@@ -1,0 +1,19 @@
+# Node modules
+node_modules/
+
+# Build files
+dist/
+build/
+
+# Environment variables
+.env
+
+# IDE files
+.idea/
+.vscode/
+
+# Playwright
+playwright/
+
+# TypeScript
+*.tsbuildinfo
