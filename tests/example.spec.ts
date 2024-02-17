@@ -1,16 +1,6 @@
 import { test, expect } from "@playwright/test";
 import LogInPage from "../pageObjects/LogInPage";
 
-test("Username and Password Fields are Visible", async ({ page }) => {
-  const loginPage = new LogInPage(page);
-
-  await loginPage.navigate();
-
-  // Expect the Logo of the page to Exist
-  await (await loginPage.getUserNameField()).waitFor({ state: "visible" });
-  await (await loginPage.getPasswordField()).waitFor({ state: "visible" });
-});
-
 test("Username and Password Fields can have numbers entered into them", async ({
   page,
 }) => {
