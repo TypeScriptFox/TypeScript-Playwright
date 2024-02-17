@@ -8,19 +8,13 @@ class PlaywrightHomePage {
   }
 
   async navigate() {
-    await this.page.goto("https://playwright.dev/");
+    await this.page.goto("https://automationintesting.online/");
   }
 
-  async getTitle() {
-    return this.page.title();
-  }
-
-  async clickGetStartedLink() {
-    await this.page.click("text=Get started");
-  }
-
-  async getInstallationHeading() {
-    return this.page.locator("text=Installation");
+  async getLogo() {
+    return this.page.locator(
+      '_react=Np[logoDetails = "https://www.mwtestconsultancy.co.uk/img/rbp-logo.png"'
+    );
   }
 }
 
