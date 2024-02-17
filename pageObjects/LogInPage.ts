@@ -1,6 +1,6 @@
 import { Page } from "@playwright/test";
 
-class PlaywrightHomePage {
+class LogInPage {
   readonly page: Page;
 
   constructor(page: Page) {
@@ -19,4 +19,4 @@ class PlaywrightHomePage {
   }
 }
 
-export default PlaywrightHomePage;
+export default LogInPage;

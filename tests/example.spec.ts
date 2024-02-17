@@ -1,8 +1,8 @@
 import { test, expect } from "@playwright/test";
-import PlaywrightHomePage from "../pageObjects/PlaywrightHomePage";
+import LogInPage from "../pageObjects/LogInPage";
 
 test("Username and Password Fields are Visible", async ({ page }) => {
-  const loginPage = new PlaywrightHomePage(page);
+  const loginPage = new LogInPage(page);
 
   await loginPage.navigate();
 
@@ -14,7 +14,7 @@ test("Username and Password Fields are Visible", async ({ page }) => {
 test("Username and Password Fields can have numbers entered into them", async ({
   page,
 }) => {
-  const loginPage = new PlaywrightHomePage(page);
+  const loginPage = new LogInPage(page);
 
   await loginPage.navigate();
 
