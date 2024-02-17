@@ -8,13 +8,14 @@ class PlaywrightHomePage {
   }
 
   async navigate() {
-    await this.page.goto("https://automationintesting.online/");
+    await this.page.goto("https://www.saucedemo.com/");
+  }
+  async getUserNameField() {
+    return await this.page.locator('_react=[id="user-name"] >> input');
   }
 
-  async getLogo() {
-    return this.page.locator(
-      '_react=Np[logoDetails = "https://www.mwtestconsultancy.co.uk/img/rbp-logo.png"'
-    );
+  async getPasswordField() {
+    return await this.page.locator('_react=[type="password"] >> input');
   }
 }
 

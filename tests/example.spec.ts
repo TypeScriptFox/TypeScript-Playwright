@@ -1,11 +1,12 @@
 import { test, expect } from "@playwright/test";
 import PlaywrightHomePage from "../pageObjects/PlaywrightHomePage";
 
-test("Has a Logo", async ({ page }) => {
-  const homePage = new PlaywrightHomePage(page);
+test("Username and Password Fields are Visible", async ({ page }) => {
+  const loginPage = new PlaywrightHomePage(page);
 
-  await homePage.navigate();
+  await loginPage.navigate();
 
   // Expect the Logo of the page to Exist
-  expect(await homePage.getLogo()).toBeTruthy();
+  await (await loginPage.getUserNameField()).waitFor({ state: "visible" });
+  await (await loginPage.getPasswordField()).waitFor({ state: "visible" });
 });
