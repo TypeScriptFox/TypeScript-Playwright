@@ -8,7 +8,7 @@ test("Username and Password Fields can have numbers entered into them", async ({
 
   await loginPage.navigate();
 
-  // Expect the Logo of the page to Exist
+  // Expect the UserName and Password fields of the page to Exist
   await (await loginPage.getUserNameField()).waitFor({ state: "visible" });
   await (await loginPage.getPasswordField()).waitFor({ state: "visible" });
 
